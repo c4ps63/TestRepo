@@ -1,0 +1,1 @@
+fmt.Println("Ovo je print u GoLangu")
