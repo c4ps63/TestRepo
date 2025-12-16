@@ -1,0 +1,5 @@
+do{
+	int i = 0;
+	int b;
+	b = 1 + 1;
+} while(a != 0)
