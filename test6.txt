@@ -1,3 +1,8 @@
 <HTML>
 	<h1>NASLOV<h1>
+	<h1>Ovdje ce da se pise manji naslov</h1>
+	<p>Sto se tice paragrafa pricacemo o blogovima danas.
+	Ne mogu da opisem koliko volim da radim na blogovima.
+	To mi je omiljena moguca funkcionalnost na kojoj sam mogao da radim.
+	</p>
 </HTML>

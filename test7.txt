@@ -1,0 +1,22 @@
+import random
+import time
+
+def unstable_counter(limit=10):
+    value = 0
+    history = []
+
+    while value < limit:
+        step = random.choice([-1, 1, 2])
+        value += step
+        value = max(0, value)
+
+        history.append(value)
+        print(f"[{time.strftime('%H:%M:%S')}] step={step:+d}, value={value}")
+
+        time.sleep(0.2)
+
+    return history
+
+if __name__ == "__main__":
+    result = unstable_counter()
+    print("Final path:", result)
