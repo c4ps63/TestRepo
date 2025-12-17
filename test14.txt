@@ -1,0 +1,17 @@
+type User = {
+  id: number;
+  name: string;
+  roles: string[];
+};
+
+function canEdit(user: User): boolean {
+  return user.roles.includes('admin') || user.roles.includes('editor');
+}
+
+const user: User = {
+  id: 1,
+  name: 'Pavle',
+  roles: ['viewer', 'editor']
+};
+
+console.log(`Can edit: ${canEdit(user)}`);
