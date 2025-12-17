@@ -3,14 +3,26 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-counter',
   template: `
-    <button (click)="dec()">-</button>
-    <span>{{ count }}</span>
-    <button (click)="inc()">+</button>
+    <h3 [style.color]="count < 0 ? 'red' : 'green'">
+      Count: {{ count }}
+    </h3>
+
+    <button (click)="change(-5)">-5</button>
+    <button (click)="change(-1)">-1</button>
+    <button (click)="change(1)">+1</button>
+    <button (click)="change(5)">+5</button>
+
+    <p *ngIf="history.length">
+      History: {{ history.join(', ') }}
+    </p>
   `
 })
 export class CounterComponent {
   count = 0;
+  history: number[] = [];
 
-  inc() { this.count++; }
-  dec() { this.count--; }
+  change(step: number) {
+    this.count += step;
+    this.history.push(this.count);
+  }
 }
