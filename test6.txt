@@ -5,4 +5,9 @@
 	Ne mogu da opisem koliko volim da radim na blogovima.
 	To mi je omiljena moguca funkcionalnost na kojoj sam mogao da radim.
 	</p>
+
+	<ol>
+		<li>Majonez</li>
+		<li>Kecap</li>
+	</ol>
 </HTML>
