@@ -1,0 +1,21 @@
+import { useState } from 'react';
+
+export default function TodoCounter() {
+  const [todos, setTodos] = useState([]);
+
+  function addTodo() {
+    setTodos([...todos, `Task #${todos.length + 1}`]);
+  }
+
+  return (
+    <div>
+      <h3>Todos: {todos.length}</h3>
+      <button onClick={addTodo}>Add</button>
+      <ul>
+        {todos.map((t, i) => (
+          <li key={i}>{t}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
