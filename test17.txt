@@ -1,0 +1,9 @@
+// Nasumično generisanje ID-ja i njegovo čuvanje u localStorage
+function generateId(prefix = "item") {
+  return `${prefix}-${Math.random().toString(36).substr(2, 8)}`;
+}
+
+const id = generateId();
+localStorage.setItem("lastGeneratedId", id);
+
+console.log("Generisani ID:", id);
