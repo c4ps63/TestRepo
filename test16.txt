@@ -1,0 +1,15 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+int main() {
+    std::vector<int> brojevi = {4, 1, 9, 2, 7};
+
+    std::sort(brojevi.begin(), brojevi.end());
+
+    for (int x : brojevi) {
+        std::cout << x << " ";
+    }
+
+    return 0;
+}
