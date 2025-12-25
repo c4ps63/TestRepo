@@ -1,0 +1,11 @@
+import random
+from datetime import datetime
+
+def random_password(length=10):
+    chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    return "".join(random.choice(chars) for _ in range(length))
+
+password = random_password()
+timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+print(f"[{timestamp}] Generisana lozinka: {password}")
